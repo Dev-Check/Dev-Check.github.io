@@ -37,3 +37,42 @@ body{
 
    line-height: 1.6
 }
+
+/*Header*/
+
+header{
+   padding: 20px 8%;
+   border-bottom: 1px solid var(--border);
+}
+
+/*Navigation */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*will remove bullet points  */
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+/*removes the hyperlinks  */
+nav a{
+    color: var(--text);
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: var(--accent);
+}
+
+/*spacing the hero text  */
+.hero h2{
+    margin-top: 20px;
+}
+
+.hero p{
+    margin-top: 25px;
+    max-width: 800px;
+}
