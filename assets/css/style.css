@@ -3,22 +3,26 @@
 =================================== */
 
 :root{
-:root{
+
     /* Backgrounds */
     --background: #1E1E1E;
     --surface: #252526;
+    --surface-light: #2D2D30;
+
+    /* Borders */
     --border: #3C3C3C;
 
     /* Text */
     --text: #D4D4D4;
     --text-secondary: #9DA5B4;
+    --white: #FFFFFF;
 
     /* VS Code Syntax Colors */
-    --blue: #569CD6;        /* Keywords */
-    --green: #4EC9B0;       /* Functions */
-    --purple: #C586C0;      /* Classes / AI */
-    --orange: #CE9178;      /* Strings */
-    --yellow: #DCDCAA;      /* Variables / Warnings */
+    --blue: #569CD6;       /* Database / Keywords */
+    --green: #4EC9B0;      /* Software / Functions */
+    --purple: #C586C0;     /* AI / Classes */
+    --orange: #CE9178;     /* Technology Tags / Strings */
+    --yellow: #DCDCAA;     /* Certifications / Variables */
 
     /* Main Accent */
     --accent: #007ACC;
@@ -34,11 +38,20 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    background: var(--background);
-    color: var(--text);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    background:var(--background);
+    color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
 /* ===================================
@@ -46,8 +59,8 @@ body{
 =================================== */
 
 header{
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
     padding:20px 8%;
 }
 
@@ -62,8 +75,9 @@ nav{
 }
 
 nav h1{
-    color: var(--text);
+    color:var(--accent);
     font-size:1.8rem;
+    font-weight:700;
 }
 
 nav ul{
@@ -74,8 +88,7 @@ nav ul{
 
 nav a{
     color:var(--text);
-    text-decoration:none;
-    transition:color .3s ease;
+    transition:color .25s ease;
 }
 
 nav a:hover{
@@ -91,40 +104,77 @@ nav a:hover{
 }
 
 .hero h1{
-    color:var(--text);
-    font-size:3.5rem;
+    color:var(--white);
+    font-size:3.8rem;
+    font-weight:700;
 }
 
 .hero h2{
-    color:var(--accent);
-    margin-top:15px;
+    color:var(--green);
     font-size:2rem;
+    margin-top:15px;
 }
 
 .hero p{
     color:var(--text-secondary);
-    margin-top:25px;
-    max-width:800px;
     font-size:1.1rem;
+    max-width:750px;
+    margin-top:25px;
 }
 
 /* ===================================
-   Buttons (We'll replace your HTML
-   buttons with links later)
+   Buttons
 =================================== */
 
 button{
     background:var(--accent);
-    color:white;
+    color:var(--white);
+
     border:none;
-    padding:12px 24px;
-    margin-top:30px;
+    border-radius:8px;
+
+    padding:14px 28px;
+
+    margin-top:35px;
     margin-right:15px;
-    border-radius:6px;
+
+    font-size:1rem;
+    font-weight:600;
+
     cursor:pointer;
-    transition:.3s;
+
+    transition:all .25s ease;
 }
 
 button:hover{
-    background:#0098ff;
+    background:var(--blue);
+}
+
+/* ===================================
+   Future Utility Classes
+=================================== */
+
+/* Artificial Intelligence */
+.ai{
+    color:var(--purple);
+}
+
+/* Database Systems */
+.database{
+    color:var(--blue);
+}
+
+/* Software Development */
+.software{
+    color:var(--green);
+}
+
+/* Technology Tags */
+.tech{
+    color:var(--orange);
+}
+
+/* Certifications / In Progress */
+.learning{
+    color:var(--yellow);
 }
