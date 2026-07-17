@@ -3,20 +3,25 @@
 =================================== */
 
 :root{
-    --background:#1E1E1E;
-    --surface:#252526;
-    --border:#3C3C3C;
+:root{
+    /* Backgrounds */
+    --background: #1E1E1E;
+    --surface: #252526;
+    --border: #3C3C3C;
 
-    --text:#D4D4D4;
-    --text-secondary:#9DA5B4;
+    /* Text */
+    --text: #D4D4D4;
+    --text-secondary: #9DA5B4;
 
-    --accent:#007ACC;
+    /* VS Code Syntax Colors */
+    --blue: #569CD6;        /* Keywords */
+    --green: #4EC9B0;       /* Functions */
+    --purple: #C586C0;      /* Classes / AI */
+    --orange: #CE9178;      /* Strings */
+    --yellow: #DCDCAA;      /* Variables / Warnings */
 
-    --ai:#C586C0;
-    --database:#569CD6;
-    --software:#4EC9B0;
-
-    --warning:#DCDCAA;
+    /* Main Accent */
+    --accent: #007ACC;
 }
 
 /* ===================================
