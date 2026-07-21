@@ -1,0 +1,56 @@
+VS Code Syntax Colors
+
+🟣 Purple — #C586C0
+
+Artificial Intelligence
+Machine Learning
+Neural Networks
+AI-related technologies
+
+🔵 Blue — #569CD6
+
+Database Systems
+SQL
+MySQL
+Oracle
+Azure SQL
+Data Engineering
+
+🟢 Green — #4EC9B0
+
+Software Engineering
+Programming Languages
+Python
+Java
+C#
+JavaScript
+
+🟠 Orange — #CE9178
+
+Technologies
+Frameworks
+Libraries
+APIs
+Tools
+Platforms
+
+Think of orange as the "supporting technology" color. Examples:
+
+OpenCV
+TensorFlow
+PyQt5
+Raspberry Pi
+Git
+GitHub
+Docker
+Flask
+Discord API
+Android SDK
+
+🟡 Yellow — #DCDCAA
+
+Certifications
+Currently Learning
+In Progress
+Badges
+Education highlights
