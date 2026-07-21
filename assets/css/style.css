@@ -141,7 +141,8 @@ nav a:hover{
    Buttons
 =================================== */
 
-button{
+button,
+.button{
     background:var(--accent);
     color:var(--white);
 
@@ -159,16 +160,15 @@ button{
     cursor:pointer;
 
     transition:all .25s ease;
+
+    display:inline-block;
+    text-decoration:none;
 }
 
-button:hover{
+button:hover,
+.button:hover{
     background:var(--blue);
 }
-
-
-
-
-
 /* ===================================
    Projects Header
 =================================== */
