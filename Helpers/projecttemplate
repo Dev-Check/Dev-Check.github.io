@@ -1,0 +1,38 @@
+<section class="project-card">
+
+    <div class="project-image">
+
+        <img src="assets/images/example.jpg"
+             alt="Example Project">
+
+    </div>
+
+    <div class="project-info">
+
+        <h2>Project Name</h2>
+
+        <p>
+            Short project description.
+        </p>
+
+        <div class="project-tags">
+
+            <span class="ai">Artificial Intelligence</span>
+
+            <span class="database">MySQL</span>
+
+            <span class="software">Python</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="#" class="button">GitHub</a>
+
+            <a href="#" class="button">Learn More</a>
+
+        </div>
+
+    </div>
+
+</section>
