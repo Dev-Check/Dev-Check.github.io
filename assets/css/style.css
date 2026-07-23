@@ -247,6 +247,15 @@ button:hover,
     color:var(--text-secondary);
 }
 
+
+.smite-image{
+    width:320px;
+    height:300px;
+
+    object-fit:cover;
+    object-position:left center;
+}
+
 /* ===================================
    Project Tags
 =================================== */
