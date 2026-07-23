@@ -229,6 +229,15 @@ button:hover,
 
     display:block;
 }
+
+.smite-image{
+    width:320px;
+    height:300px;
+
+    object-fit:cover;
+    object-position:left center;
+}
+
 /* ===================================
    Project Information
 =================================== */
@@ -248,13 +257,6 @@ button:hover,
 }
 
 
-.smite-image{
-    width:320px;
-    height:300px;
-
-    object-fit:cover;
-    object-position:left center;
-}
 
 /* ===================================
    Project Tags
