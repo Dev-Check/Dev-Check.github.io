@@ -634,3 +634,142 @@ button:hover,
     margin-bottom:15px;
     font-size:1.3rem;
 }
+
+
+/* ===================================
+   Contact Page
+=================================== */
+
+
+.contact-header{
+
+    padding:80px 8% 40px;
+    text-align:center;
+
+}
+
+
+.contact-header h1{
+
+    color:var(--white);
+    font-size:3rem;
+    margin-bottom:20px;
+
+}
+
+
+.contact-header p{
+
+    max-width:750px;
+    margin:auto;
+
+    color:var(--text-secondary);
+    font-size:1.1rem;
+
+}
+
+
+
+
+.contact-section{
+
+    padding:40px 8%;
+
+}
+
+
+
+.contact-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:30px;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+
+
+.contact-card h2{
+
+    color:var(--green);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.contact-card p{
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+
+}
+
+
+
+
+.contact-links{
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+.contact-item{
+
+    background:var(--surface-light);
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    padding:20px;
+
+    transition:.25s ease;
+
+}
+
+
+
+.contact-item:hover{
+
+    border-color:var(--accent);
+
+    transform:translateY(-3px);
+
+}
+
+
+
+.contact-item span{
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+}
+
+
+
+.contact-item p{
+
+    margin-top:5px;
+
+}
