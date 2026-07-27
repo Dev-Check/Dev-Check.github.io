@@ -238,6 +238,14 @@ button:hover,
     object-position:left center;
 }
 
+
+.sims-image{
+
+    object-fit: contain;
+    object-position: center;
+
+}
+
 /* ===================================
    Project Information
 =================================== */
