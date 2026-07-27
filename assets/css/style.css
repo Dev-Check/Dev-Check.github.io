@@ -625,3 +625,7 @@ button:hover,
     font-size:1.05rem;
 
 }
+
+.about-card p{
+    margin-bottom:20px;
+}
