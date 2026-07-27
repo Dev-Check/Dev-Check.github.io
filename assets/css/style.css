@@ -771,3 +771,53 @@ button:hover,
     margin-top:5px;
 
 }
+
+
+/* ===================================
+   Colored Section Overrides
+=================================== */
+
+/* Section Headers */
+
+.about-section h2.ai{
+    color:var(--purple);
+}
+
+.about-section h2.database{
+    color:var(--blue);
+}
+
+.about-section h2.software{
+    color:var(--green);
+}
+
+.about-section h2.tech{
+    color:var(--orange);
+}
+
+.about-section h2.learning{
+    color:var(--yellow);
+}
+
+
+/* Card Titles */
+
+.about-card h3.ai{
+    color:var(--purple);
+}
+
+.about-card h3.database{
+    color:var(--blue);
+}
+
+.about-card h3.software{
+    color:var(--green);
+}
+
+.about-card h3.tech{
+    color:var(--orange);
+}
+
+.about-card h3.learning{
+    color:var(--yellow);
+}
