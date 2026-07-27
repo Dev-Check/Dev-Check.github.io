@@ -241,8 +241,10 @@ button:hover,
 
 .sims-image{
 
-    object-fit: contain;
-    object-position: center;
+    width:220px;
+    height:auto;
+
+    object-fit:contain;
 
 }
 
