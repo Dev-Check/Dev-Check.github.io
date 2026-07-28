@@ -821,3 +821,103 @@ button:hover,
 .about-card h3.learning{
     color:var(--yellow);
 }
+
+
+
+/* ===================================
+   Project Detail Pages
+=================================== */
+
+
+/* Project Detail Images */
+
+.about-card img{
+
+    width:100%;
+
+    border-radius:10px;
+
+    border:1px solid var(--border);
+
+}
+
+
+/* Project Videos */
+
+.about-card video{
+
+    width:100%;
+
+    border-radius:10px;
+
+    border:1px solid var(--border);
+
+    background:black;
+
+}
+
+
+/* Project Feature Lists */
+
+.about-card ul{
+
+    color:var(--text-secondary);
+
+    margin-left:25px;
+
+}
+
+
+.about-card li{
+
+    margin-bottom:10px;
+
+}
+
+
+
+/* Strong Text */
+
+.about-card strong{
+
+    color:var(--white);
+
+}
+
+
+
+/* Project Detail Headings */
+
+.about-section h2.ai{
+
+    color:var(--purple);
+
+}
+
+
+.about-section h2.database{
+
+    color:var(--blue);
+
+}
+
+
+.about-section h2.software{
+
+    color:var(--green);
+
+}
+
+
+.about-section h2.tech{
+
+    color:var(--orange);
+
+}
+
+
+.about-section h2.learning{
+
+    color:var(--yellow);
+
+}
