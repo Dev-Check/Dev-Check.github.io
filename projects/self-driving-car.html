@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Self-Driving Car AI | D'vin Johnson</title>
+    <title>Self-Driving Vehicle AI | D'vin Johnson</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
 
@@ -48,14 +48,16 @@
 
 <section class="projects-header">
 
-    <h1>Self-Driving Car AI</h1>
+    <h1>Self-Driving Vehicle AI</h1>
 
     <p>
 
-        A two-semester artificial intelligence project focused on creating
-        a self-driving vehicle capable of learning how to navigate using
-        machine learning techniques, computer vision concepts, and
-        autonomous decision making.
+        A year-long autonomous vehicle project developed in association
+        with Harrisburg University of Science and Technology, built on
+        the Yahboom G1 AI Vision Smart Tank. The project trains a
+        convolutional neural network to recognize a track from camera
+        images and uses those predictions to steer the robot in real
+        time.
 
     </p>
 
@@ -73,8 +75,8 @@
 
     <div class="project-image">
 
-        <img src="../assets/images/self-driving-car.jpg"
-             alt="Self Driving Car AI">
+        <img src="../assets/images/self-driving-model.jpg"
+             alt="Yahboom G1 AI Vision Smart Tank robot">
 
     </div>
 
@@ -84,19 +86,23 @@
 
         <p>
 
-            This project was developed over two semesters as both a research
-            and software engineering project. My goal was to understand how
-            artificial intelligence can make driving decisions using sensor
-            data rather than hard-coded movement.
+            This project was developed over a full year as a research and
+            software engineering project centered on the Yahboom G1 AI
+            Vision Smart Tank. My goal was to give the robot the ability
+            to recognize and follow a physical track using a trained
+            neural network instead of hard-coded movement logic.
 
         </p>
 
         <p>
 
-            Throughout development I researched autonomous driving
-            techniques, designed the project architecture, implemented the
-            application in Python, and evaluated how different AI behaviors
-            affected driving performance.
+            The system works as a client-server pipeline: the robot's
+            onboard camera captures images and sends them from the
+            Raspberry Pi to my laptop over the network. My laptop runs
+            the trained model to generate steering predictions from each
+            image, then sends those predictions back to the Pi, which
+            uses them to drive the motors and adjust the wheels
+            accordingly.
 
         </p>
 
@@ -104,47 +110,21 @@
 
             <span class="ai">Artificial Intelligence</span>
             <span class="software">Python</span>
+            <span class="tech">TensorFlow / Keras</span>
             <span class="tech">Computer Vision</span>
-            <span class="tech">Machine Learning</span>
+            <span class="tech">Raspberry Pi</span>
 
         </div>
 
         <div class="project-buttons">
 
-            <a href="#" class="button">GitHub</a>
+            <a href="https://github.com/Dev-Check/Self-Driving-Vehicle" class="button">GitHub</a>
 
             <a href="../projects.html" class="button">
                 Back to Projects
             </a>
 
         </div>
-
-    </div>
-
-</section>
-
-
-
-
-
-<!-- ==========================
-     Demo Video
-=========================== -->
-
-<section class="about-section">
-
-    <h2 class="software">Project Demonstration</h2>
-
-    <div class="about-card">
-
-        <video controls width="100%">
-
-            <source src="../assets/videos/self-driving-demo.mp4"
-                    type="video/mp4">
-
-            Your browser does not support HTML5 video.
-
-        </video>
 
     </div>
 
@@ -166,25 +146,31 @@
 
         <div class="about-card">
 
-            <img src="../assets/images/self-driving-1.jpg"
-                 alt="Training"
+            <img src="../assets/images/self-driving-model.jpg"
+                 alt="The physical Yahboom G1 tank robot used for this project"
                  width="100%">
+
+            <p>The actual robot: a Yahboom G1 AI Vision Smart Tank fitted with an onboard camera for image capture.</p>
 
         </div>
 
         <div class="about-card">
 
-            <img src="../assets/images/self-driving-2.jpg"
-                 alt="Sensors"
+            <img src="../assets/images/training-results.jpg"
+                 alt="Model compiling and training results"
                  width="100%">
+
+            <p>Compiling and training the CNN in TensorFlow/Keras on the labeled track-image dataset.</p>
 
         </div>
 
         <div class="about-card">
 
-            <img src="../assets/images/self-driving-3.jpg"
-                 alt="Simulation"
+            <img src="../assets/images/pi-connection-diagram.jpg"
+                 alt="Diagram of the laptop and Raspberry Pi connection pipeline"
                  width="100%">
+
+            <p>How the pieces connect: the Pi captures and sends images to the laptop, the laptop runs predictions, and sends steering commands back to the Pi.</p>
 
         </div>
 
@@ -208,13 +194,12 @@
 
         <ul>
 
-            <li>Autonomous vehicle navigation</li>
-            <li>AI-controlled steering decisions</li>
-            <li>Collision detection</li>
-            <li>Sensor-based environment awareness</li>
-            <li>Python implementation</li>
-            <li>Simulation-based testing</li>
-            <li>Research-driven development process</li>
+            <li>Convolutional neural network trained to detect the track from camera images</li>
+            <li>Client-server architecture linking a Raspberry Pi to a laptop over the network</li>
+            <li>Real-time image capture on the Pi, sent to the laptop for processing</li>
+            <li>Prediction results sent back to the Pi to control motor movement</li>
+            <li>Labeled image dataset used for supervised training</li>
+            <li>Python implementation with TensorFlow and Keras</li>
 
         </ul>
 
@@ -244,11 +229,27 @@
 
         <p>
 
+            <strong>Frameworks/Libraries:</strong>
+            TensorFlow,
+            Keras
+
+        </p>
+
+        <p>
+
+            <strong>Hardware:</strong>
+            Yahboom G1 AI Vision Smart Tank,
+            Raspberry Pi
+
+        </p>
+
+        <p>
+
             <strong>Topics:</strong>
             Artificial Intelligence,
             Machine Learning,
             Computer Vision,
-            Software Engineering
+            Robotics
 
         </p>
 
@@ -281,17 +282,20 @@
 
         <p>
 
-            One of the biggest challenges during development was creating
-            AI behavior that could consistently navigate the environment
-            without relying on hard-coded movement.
+            One of the biggest challenges was building a labeled dataset
+            good enough for the model to reliably recognize the track,
+            and tuning the CNN so its predictions translated into smooth,
+            accurate steering rather than jerky or incorrect movement.
 
         </p>
 
         <p>
 
-            The project required experimenting with different approaches,
-            debugging unexpected behaviors, and refining how the AI
-            interpreted information before making driving decisions.
+            Getting the Pi-to-laptop pipeline working reliably was
+            another major hurdle — capturing images on the Pi, sending
+            them to the laptop, running predictions, and sending the
+            results back all needed to happen quickly enough for the
+            robot to respond in real time.
 
         </p>
 
@@ -316,17 +320,19 @@
         <p>
 
             This project significantly expanded my understanding of
-            artificial intelligence development, research methodology,
-            software architecture, and large-scale Python applications.
+            convolutional neural networks, supervised training with
+            labeled image data, and how to structure a real-time
+            client-server system for a robotics application.
 
         </p>
 
         <p>
 
-            It also strengthened my ability to break large problems into
-            manageable components while documenting research, testing
-            solutions, and improving software through iterative
-            development.
+            It also strengthened my ability to work across the full
+            pipeline — from data collection and preprocessing to model
+            training and deployment on physical hardware — while
+            documenting the research and iterating on what wasn't
+            working.
 
         </p>
 
@@ -350,11 +356,11 @@
 
         <ul>
 
-            <li>Improve AI decision making</li>
-            <li>Add additional driving environments</li>
-            <li>Create more realistic traffic</li>
-            <li>Experiment with different learning models</li>
-            <li>Enhance visualizations and analytics</li>
+            <li>Expand the labeled dataset for better generalization</li>
+            <li>Reduce latency in the Pi-to-laptop prediction pipeline</li>
+            <li>Experiment with different CNN architectures</li>
+            <li>Add obstacle detection alongside track following</li>
+            <li>Improve visualizations of training performance</li>
 
         </ul>
 
