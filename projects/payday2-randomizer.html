@@ -1,1 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payday Randomizer | D'vin Johnson</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================
+     Navigation
+=========================== -->
+
+<header>
+
+    <nav>
+
+        <h1>D'vin Johnson</h1>
+
+        <ul>
+
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../building.html">Currently Building</a></li>
+            <li><a href="../learning.html">Learning Journey</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+<!-- ==========================
+     Project Header
+=========================== -->
+
+<section class="projects-header">
+
+    <h1>Payday Randomizer</h1>
+
+    <p>
+
+        A desktop GUI application built for the game Payday 2 that lets
+        players pick which DLC they own and then generates a fully
+        randomized loadout — primary weapon, secondary weapon, melee
+        weapon, gadget, throwable, perk deck, and heist — pulled from a
+        database of in-game items.
+
+    </p>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Hero / Overview
+=========================== -->
+
+<section class="project-card">
+
+    <div class="project-image">
+
+        <img src="../assets/images/paydayrandomizer-screen1.jpg"
+             alt="Payday Randomizer application screenshot">
+
+    </div>
+
+    <div class="project-info">
+
+        <h2>Project Overview</h2>
+
+        <p>
+
+            Payday Randomizer is a Python GUI application that solves a
+            simple problem for Payday 2 players: deciding what to bring
+            on a heist. Instead of manually picking a loadout, the app
+            lets the user select which DLC packs they own, then
+            randomly generates a full loadout using only items from
+            content they actually have access to.
+
+        </p>
+
+        <p>
+
+            The item data — weapons, gadgets, throwables, perk decks,
+            and heists — is stored in a database rather than hard-coded
+            into the app, which meant designing a schema up front (an
+            ERD) to properly separate items by category and by which
+            DLC they belong to before writing the randomization logic
+            on top of it.
+
+        </p>
+
+        <div class="project-tags">
+
+            <span class="software">Python</span>
+            <span class="database">Database Design</span>
+            <span class="tech">GUI Development</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="https://github.com/Dev-Check/paydayrandomizer" class="button">GitHub</a>
+
+            <a href="../projects.html" class="button">
+                Back to Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Demo Video
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="software">Project Demonstration</h2>
+
+    <div class="about-card">
+
+        <video controls width="100%">
+
+            <source src="../assets/videos/paydayrandomizer-demo.mp4"
+                    type="video/mp4">
+
+            Your browser does not support HTML5 video.
+
+        </video>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Image Gallery
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="software">Development Gallery</h2>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <img src="../assets/images/paydayrandomizer-erd.jpg"
+                 alt="Entity relationship diagram for the Payday Randomizer database"
+                 width="100%">
+
+            <p>The ERD used to design the database — mapping out how weapons, gear, perk decks, and heists relate to their DLC packs before writing any randomization logic.</p>
+
+        </div>
+
+        <div class="about-card">
+
+            <img src="../assets/images/paydayrandomizer-screen1.jpg"
+                 alt="Payday Randomizer main application window"
+                 width="100%">
+
+            <p>The main application window where the user selects owned DLC before generating a loadout.</p>
+
+        </div>
+
+        <div class="about-card">
+
+            <img src="../assets/images/paydayrandomizer-screen2.jpg"
+                 alt="Payday Randomizer results screen"
+                 width="100%">
+
+            <p>A generated loadout, showing the randomized primary, secondary, melee, gadget, throwable, perk deck, and heist.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Features
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="software">Key Features</h2>
+
+    <div class="about-card">
+
+        <ul>
+
+            <li>DLC selection so results only include content the user actually owns</li>
+            <li>Randomized primary weapon, secondary weapon, and melee weapon</li>
+            <li>Randomized gadget, throwable, and perk deck</li>
+            <li>Randomized heist selection</li>
+            <li>Item data stored in and pulled from a database rather than hard-coded</li>
+            <li>Desktop GUI built in Python</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Technologies
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="tech">Technologies Used</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            <strong>Language:</strong> Python
+
+        </p>
+
+        <p>
+
+            <strong>Interface:</strong> Desktop GUI application
+
+        </p>
+
+        <p>
+
+            <strong>Data:</strong> Relational database, designed from an ERD
+
+        </p>
+
+        <p>
+
+            <strong>Tools:</strong>
+            Python,
+            Git,
+            GitHub
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Challenges
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="ai">Challenges</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            Designing the database schema before writing any of the
+            randomization code was a different workflow than I was used
+            to. Getting the ERD right — properly linking weapons, gear,
+            and heists to the correct DLC packs — took some iteration
+            before the relationships actually supported clean queries.
+
+        </p>
+
+        <p>
+
+            Building the GUI itself was also a learning curve, since it
+            meant thinking through the user's flow (selecting DLC,
+            triggering randomization, displaying results) rather than
+            just running everything through a terminal.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     What I Learned
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="learning">What I Learned</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            This project gave me hands-on experience designing a
+            database schema from scratch, starting with an ERD and
+            working forward into actual tables and queries, rather than
+            adapting an existing structure.
+
+        </p>
+
+        <p>
+
+            It also strengthened my Python GUI development skills and
+            my ability to connect a front-end interface to a backing
+            database in a way that stays organized as more features get
+            added.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Future Improvements
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="database">Future Improvements</h2>
+
+    <div class="about-card">
+
+        <ul>
+
+            <li>Add support for additional or newly released DLC packs</li>
+            <li>Let users save and revisit previously generated loadouts</li>
+            <li>Add weighting so certain items appear more or less often</li>
+            <li>Polish the GUI's visual design</li>
+            <li>Package the app as a standalone executable for easier distribution</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>
