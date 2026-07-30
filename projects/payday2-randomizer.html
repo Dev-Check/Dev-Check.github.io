@@ -96,20 +96,32 @@
 
         <p>
 
-            The item data — weapons, gadgets, throwables, perk decks,
-            and heists — is stored in a database rather than hard-coded
-            into the app, which meant designing a schema up front (an
-            ERD) to properly separate items by category and by which
-            DLC they belong to before writing the randomization logic
-            on top of it.
+            The item data — weapons, armor, gear, throwables, perk
+            decks, and heists — lives in a MySQL database rather than
+            being hard-coded into the app, which meant designing a
+            schema up front (an ERD) to properly separate items by
+            category and by which DLC they belong to before writing the
+            randomization logic on top of it.
+
+        </p>
+
+        <p>
+
+            The GUI itself, built with Tkinter, includes a slot-machine
+            style roll: hitting the Roll button or spacebar spins
+            through random results for about two seconds before landing
+            on the final loadout. A separate "Manage DLC" window lets
+            the user check off which DLC packs they own, with Select
+            All / Select None shortcuts, and saves those choices back to
+            the database.
 
         </p>
 
         <div class="project-tags">
 
             <span class="software">Python</span>
-            <span class="database">Database Design</span>
-            <span class="tech">GUI Development</span>
+            <span class="tech">Tkinter</span>
+            <span class="database">MySQL</span>
 
         </div>
 
@@ -218,12 +230,14 @@
 
         <ul>
 
-            <li>DLC selection so results only include content the user actually owns</li>
-            <li>Randomized primary weapon, secondary weapon, and melee weapon</li>
-            <li>Randomized gadget, throwable, and perk deck</li>
-            <li>Randomized heist selection</li>
-            <li>Item data stored in and pulled from a database rather than hard-coded</li>
-            <li>Desktop GUI built in Python</li>
+            <li>Manage DLC window with checkboxes, plus Select All / Select None, to control which content the randomizer can pull from</li>
+            <li>Slot-machine style roll animation — results spin for ~2 seconds before landing on the final loadout</li>
+            <li>Roll triggered by button click or spacebar</li>
+            <li>Randomized primary weapon, secondary weapon, melee weapon, armor, deployable equipment, perk deck, and throwable</li>
+            <li>Randomized heist with a Loud or Stealth mode, depending on the heist's supported styles</li>
+            <li>Perk-throwable synergy — certain perk decks (like Leech or Hacker) automatically pair with their matching throwable instead of rolling one at random</li>
+            <li>Attachment rules tied to whether the rolled heist came up Loud or Stealth</li>
+            <li>All item data pulled live from a MySQL database rather than hard-coded</li>
 
         </ul>
 
@@ -253,13 +267,13 @@
 
         <p>
 
-            <strong>Interface:</strong> Desktop GUI application
+            <strong>Interface:</strong> Desktop GUI built with Tkinter
 
         </p>
 
         <p>
 
-            <strong>Data:</strong> Relational database, designed from an ERD
+            <strong>Data:</strong> MySQL database, designed from an ERD, with tables for weapons, armor, equipment, melee, perk decks, throwables, heists, and DLC
 
         </p>
 
@@ -267,6 +281,7 @@
 
             <strong>Tools:</strong>
             Python,
+            MySQL,
             Git,
             GitHub
 
@@ -302,10 +317,32 @@
 
         <p>
 
-            Building the GUI itself was also a learning curve, since it
-            meant thinking through the user's flow (selecting DLC,
-            triggering randomization, displaying results) rather than
-            just running everything through a terminal.
+            Handling edge cases in the randomization logic took extra
+            thought — some perk decks (like Leech or Hacker) needed to
+            force a specific matching throwable instead of a random one,
+            and attachment rules needed to change depending on whether
+            the rolled heist landed as Loud or Stealth.
+
+        </p>
+
+        <p>
+
+            Building the Tkinter GUI was also a learning curve,
+            especially getting the slot-machine-style rolling animation
+            to run smoothly on a timer without freezing the rest of the
+            interface, and building a separate scrollable DLC-management
+            window that stayed in sync with the database.
+
+        </p>
+
+        <p>
+
+            Populating the database itself was one of the most
+            time-consuming parts of the whole project. I couldn't find
+            any existing CSV files listing every Payday 2 weapon, piece
+            of gear, perk deck, and heist along with its DLC, so all of
+            that data had to be entered by hand from scratch before the
+            randomizer had anything to actually pull from.
 
         </p>
 
@@ -365,6 +402,7 @@
 
         <ul>
 
+            <li>Add images for each weapon, gear, and heist so results show pictures instead of just item names</li>
             <li>Add support for additional or newly released DLC packs</li>
             <li>Let users save and revisit previously generated loadouts</li>
             <li>Add weighting so certain items appear more or less often</li>
