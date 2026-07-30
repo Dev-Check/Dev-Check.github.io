@@ -231,8 +231,6 @@
         <ul>
 
             <li>Manage DLC window with checkboxes, plus Select All / Select None, to control which content the randomizer can pull from</li>
-            <li>Slot-machine style roll animation — results spin for ~2 seconds before landing on the final loadout</li>
-            <li>Roll triggered by button click or spacebar</li>
             <li>Randomized primary weapon, secondary weapon, melee weapon, armor, deployable equipment, perk deck, and throwable</li>
             <li>Randomized heist with a Loud or Stealth mode, depending on the heist's supported styles</li>
             <li>Perk-throwable synergy — certain perk decks (like Leech or Hacker) automatically pair with their matching throwable instead of rolling one at random</li>
@@ -305,15 +303,6 @@
 
     <div class="about-card">
 
-        <p>
-
-            Designing the database schema before writing any of the
-            randomization code was a different workflow than I was used
-            to. Getting the ERD right — properly linking weapons, gear,
-            and heists to the correct DLC packs — took some iteration
-            before the relationships actually supported clean queries.
-
-        </p>
 
         <p>
 
@@ -404,8 +393,6 @@
 
             <li>Add images for each weapon, gear, and heist so results show pictures instead of just item names</li>
             <li>Add support for additional or newly released DLC packs</li>
-            <li>Let users save and revisit previously generated loadouts</li>
-            <li>Add weighting so certain items appear more or less often</li>
             <li>Polish the GUI's visual design</li>
             <li>Package the app as a standalone executable for easier distribution</li>
 
