@@ -1,1 +1,404 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raspberry Pi Human Detection System | D'vin Johnson</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================
+     Navigation
+=========================== -->
+
+<header>
+
+    <nav>
+
+        <h1>D'vin Johnson</h1>
+
+        <ul>
+
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../building.html">Currently Building</a></li>
+            <li><a href="../learning.html">Learning Journey</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+<!-- ==========================
+     Project Header
+=========================== -->
+
+<section class="projects-header">
+
+    <h1>Raspberry Pi Human Detection System</h1>
+
+    <p>
+
+        An embedded computer vision system that uses a custom
+        TensorFlow Lite object detection model running on a Raspberry
+        Pi to detect nearby people in real time. Detection confidence
+        is displayed using a multi-stage LED indicator connected
+        through a Raspberry Pi GPIO breadboard circuit, while a buzzer
+        activates when confidence reaches a critical threshold.
+
+    </p>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Hero Image
+=========================== -->
+
+<section class="project-card">
+
+    <div class="project-image">
+
+        <img src="../assets/images/pi-detection-setup.jpg"
+             alt="Full Raspberry Pi human detection setup">
+
+    </div>
+
+    <div class="project-info">
+
+        <h2>Project Overview</h2>
+
+        <p>
+
+            This project runs a custom-trained TensorFlow Lite model
+            on a Raspberry Pi to detect whether a person is present in
+            the camera's field of view. Each frame from the camera is
+            resized to 128x128, normalized, and fed through the model,
+            which outputs a confidence score between 0 and 1 —
+            converted to a percentage and used to drive the rest of
+            the system in real time.
+
+        </p>
+
+        <p>
+
+            That confidence score controls a 6-LED indicator wired
+            through a GPIO breadboard circuit, lighting LEDs in pairs
+            as confidence crosses 50%, 70%, and 85%. At the 85%
+            threshold, a buzzer also activates as a critical alert.
+            The project includes both a GUI version, which shows a
+            live OpenCV window with the detection label overlaid on
+            the video feed, and a headless version that prints
+            confidence readings to the terminal for running without a
+            display, such as over SSH.
+
+        </p>
+
+        <div class="project-tags">
+
+            <span class="ai">Artificial Intelligence</span>
+            <span class="software">Python</span>
+            <span class="tech">TensorFlow Lite</span>
+            <span class="tech">OpenCV</span>
+            <span class="tech">Raspberry Pi GPIO</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="https://github.com/Dev-Check/PI-Detection-System" class="button">GitHub</a>
+
+            <a href="../projects.html" class="button">
+                Back to Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Demo Video
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="software">Project Demonstration</h2>
+
+    <div class="about-card">
+
+        <video controls width="100%">
+
+            <source src="../assets/videos/pi-detection-demo.mp4"
+                    type="video/mp4">
+
+            Your browser does not support HTML5 video.
+
+        </video>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Image Gallery
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="software">Development Gallery</h2>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <img src="../assets/images/pi-detection-circuit.jpg"
+                 alt="GPIO breadboard circuit with LEDs and buzzer"
+                 width="100%">
+
+            <p>The GPIO breadboard circuit — 6 LEDs wired in pairs plus a buzzer, driven directly by the Pi's GPIO pins.</p>
+
+        </div>
+
+        <div class="about-card">
+
+            <img src="../assets/images/pi-detection-screen.jpg"
+                 alt="Live detection screen showing confidence percentage"
+                 width="100%">
+
+            <p>The live detection window, showing the "Human"/"Not Human" label and confidence percentage overlaid on the camera feed.</p>
+
+        </div>
+
+        <div class="about-card">
+
+            <img src="../assets/images/pi-detection-setup.jpg"
+                 alt="Full Raspberry Pi human detection setup"
+                 width="100%">
+
+            <p>The full setup — Raspberry Pi, camera, and breadboard circuit all connected and running together.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Features
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="software">Key Features</h2>
+
+    <div class="about-card">
+
+        <ul>
+
+            <li>Custom TensorFlow Lite model for real-time human detection</li>
+            <li>Live camera feed processed frame-by-frame on the Pi</li>
+            <li>Multi-stage LED indicator — LEDs light in pairs at 50%, 70%, and 85% confidence</li>
+            <li>Buzzer alert triggered at 85%+ confidence for a critical warning</li>
+            <li>GUI mode with a live OpenCV window and on-screen confidence label</li>
+            <li>Headless/debug mode that prints confidence to the terminal for display-free operation</li>
+            <li>Clean GPIO shutdown on exit to reset all LEDs and the buzzer</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Technologies
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="tech">Technologies Used</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            <strong>Language:</strong> Python
+
+        </p>
+
+        <p>
+
+            <strong>Machine Learning:</strong> TensorFlow Lite (custom-trained model)
+
+        </p>
+
+        <p>
+
+            <strong>Computer Vision:</strong> OpenCV
+
+        </p>
+
+        <p>
+
+            <strong>Hardware:</strong> Raspberry Pi, camera module, GPIO breadboard circuit (6 LEDs, buzzer)
+
+        </p>
+
+        <p>
+
+            <strong>Tools:</strong>
+            Python,
+            gpiozero,
+            Git,
+            GitHub
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Challenges
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="ai">Challenges</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            Getting the model to run efficiently enough for real-time
+            detection on the Pi's limited hardware was a core
+            challenge, which is part of why the final model runs
+            through TensorFlow Lite rather than a full TensorFlow
+            model.
+
+        </p>
+
+        <p>
+
+            Wiring and debugging the GPIO circuit added another layer
+            of difficulty on top of the software — making sure the LED
+            pairs and buzzer triggered at the right confidence
+            thresholds, and that everything reset cleanly if the
+            script was interrupted, took real trial and error with the
+            breadboard.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     What I Learned
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="learning">What I Learned</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            This project gave me hands-on experience deploying a
+            machine learning model onto embedded hardware, including
+            the tradeoffs involved in converting a model to
+            TensorFlow Lite to make it feasible for a Raspberry Pi.
+
+        </p>
+
+        <p>
+
+            It also strengthened my understanding of GPIO programming
+            with gpiozero, and how to tie real-time software output
+            (a model's confidence score) directly to physical hardware
+            behavior like LEDs and a buzzer.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Future Improvements
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="database">Future Improvements</h2>
+
+    <div class="about-card">
+
+        <ul>
+
+            <li>Improve model accuracy with a larger, more varied training dataset</li>
+            <li>Add logging of detection events with timestamps</li>
+            <li>Send remote alerts (e.g. a notification) when critical confidence is reached</li>
+            <li>Optimize inference speed further for smoother real-time performance</li>
+            <li>Expand detection beyond a single person to detect and count multiple people</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>
