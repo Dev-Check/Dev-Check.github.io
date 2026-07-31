@@ -1,1 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smite 2 Overlay and Tracker | D'vin Johnson</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================
+     Navigation
+=========================== -->
+
+<header>
+
+    <nav>
+
+        <h1>D'vin Johnson</h1>
+
+        <ul>
+
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../building.html">Currently Building</a></li>
+            <li><a href="../learning.html">Learning Journey</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+<!-- ==========================
+     Project Header
+=========================== -->
+
+<section class="projects-header">
+
+    <h1>Smite 2 Overlay and Tracker</h1>
+
+    <p>
+
+        A always-on-top desktop overlay for Smite 2 that tracks
+        matchup winrates and KDA between gods, backed by a MySQL
+        database of logged matches.
+
+    </p>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Hero / Overview
+=========================== -->
+
+<section class="project-card">
+
+    <div class="project-image">
+
+        <img src="../assets/images/smite-overlay-main.jpg"
+             alt="Smite 2 Overlay and Tracker main window">
+
+    </div>
+
+    <div class="project-info">
+
+        <h2>Project Overview</h2>
+
+        <p>
+
+            This project is a small, frameless PyQt5 overlay that
+            stays pinned to the corner of the screen while playing
+            Smite 2. It lets me pick my god, an enemy god, and a role
+            from dropdowns, and instantly shows the historical winrate
+            and KDA for that specific matchup, pulled live from a
+            MySQL database of logged matches.
+
+        </p>
+
+        <p>
+
+            Beyond the live matchup lookup, the overlay has two other
+            screens: an "Add Match" form for logging a completed
+            game's role, gods, kills/deaths/assists, game time, and
+            win/loss, and a "View Matchups" window that queries the
+            database for the top 5 best and worst matchups for the
+            selected god and role, ranked by winrate.
+
+        </p>
+
+        <div class="project-tags">
+
+            <span class="software">Python</span>
+            <span class="tech">PyQt5</span>
+            <span class="database">MySQL</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="https://github.com/Dev-Check/Smite-2-Overlay-and-Tracker" class="button">GitHub</a>
+
+            <a href="../projects.html" class="button">
+                Back to Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Image Gallery
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="software">Development Gallery</h2>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <img src="../assets/images/smite-overlay-main.jpg"
+                 alt="The main overlay window, in the corner of the screen"
+                 width="100%">
+
+            <p>The main overlay in action — since it's designed to stay out of the way during a match, it only takes up a small corner of the screen.</p>
+
+        </div>
+
+        <div class="about-card">
+
+            <img src="../assets/images/smite-overlay-addmatch.jpg"
+                 alt="The Add Match form window"
+                 width="100%">
+
+            <p>The Add Match window, used to log a completed game's gods, role, KDA, game time, and result into the database.</p>
+
+        </div>
+
+        <div class="about-card">
+
+            <img src="../assets/images/smite-overlay-matchups.jpg"
+                 alt="The View Matchups window showing best and worst matchups"
+                 width="100%">
+
+            <p>The Matchups window, showing the top 5 best and worst matchups by winrate for the selected god and role.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Features
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="software">Key Features</h2>
+
+    <div class="about-card">
+
+        <ul>
+
+            <li>Always-on-top, frameless overlay that stays out of the way during a match</li>
+            <li>God, enemy god, and role dropdowns that instantly update the displayed stats</li>
+            <li>Live winrate and KDA lookup for a specific god-vs-god-vs-role matchup</li>
+            <li>Add Match form for logging date, gamemode, role, gods, kills/deaths/assists, game time, and win/loss</li>
+            <li>View Matchups window showing the top 5 best and worst matchups by winrate, with a minimum-games threshold to avoid small sample sizes</li>
+            <li>All stats calculated directly from SQL queries against a MySQL database rather than pre-computed</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Technologies
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="tech">Technologies Used</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            <strong>Language:</strong> Python
+
+        </p>
+
+        <p>
+
+            <strong>Interface:</strong> PyQt5 desktop overlay
+
+        </p>
+
+        <p>
+
+            <strong>Data:</strong> MySQL database (<code>smite_stats</code>), with <code>gods</code> and <code>matches</code> tables
+
+        </p>
+
+        <p>
+
+            <strong>Tools:</strong>
+            Python,
+            MySQL,
+            Git,
+            GitHub
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Challenges
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="ai">Challenges</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            Getting the overlay to actually behave like an overlay —
+            frameless, always-on-top, and positioned so it doesn't
+            block the game — took some tuning of PyQt5's window flags
+            and geometry rather than just building a normal
+            application window.
+
+        </p>
+
+        <p>
+
+            Writing the matchup queries also took care, since winrate
+            and KDA needed to be calculated correctly per god, per
+            enemy god, and per role, while the best/worst matchups
+            query additionally needed a minimum-games threshold so a
+            single lucky or unlucky game didn't dominate the results.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     What I Learned
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="learning">What I Learned</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            This project strengthened my SQL skills, especially
+            writing aggregate queries with subqueries, joins, and
+            HAVING clauses to turn raw match logs into useful stats
+            like winrate and KDA on the fly.
+
+        </p>
+
+        <p>
+
+            It also gave me practical experience with PyQt5 beyond a
+            standard window — building a persistent overlay, wiring up
+            multiple secondary windows, and keeping the interface
+            responsive to live dropdown changes.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Future Improvements
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="database">Future Improvements</h2>
+
+    <div class="about-card">
+
+        <ul>
+
+            <li>Auto-detect gods and match results instead of manual entry</li>
+            <li>Add more stat breakdowns, like performance by gamemode</li>
+            <li>Make the overlay's position and size adjustable</li>
+            <li>Add charts to visualize trends over time</li>
+            <li>Package the app for easier installation and setup</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>
