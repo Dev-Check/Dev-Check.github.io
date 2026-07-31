@@ -1,1 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sims 4 Challenge Tracker | D'vin Johnson</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================
+     Navigation
+=========================== -->
+
+<header>
+
+    <nav>
+
+        <h1>D'vin Johnson</h1>
+
+        <ul>
+
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../building.html">Currently Building</a></li>
+            <li><a href="../learning.html">Learning Journey</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+<!-- ==========================
+     Project Header
+=========================== -->
+
+<section class="projects-header">
+
+    <h1>Sims 4 Challenge Tracker</h1>
+
+    <p>
+
+        A full-stack Android application for The Sims 4 players to
+        organize and track progress through legacy and generational
+        challenges — browsing challenges, viewing generation
+        requirements, and checking off goals like aspirations, traits,
+        careers, and milestones.
+
+    </p>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Overview
+=========================== -->
+
+<section class="project-card">
+
+    <div class="project-info">
+
+        <h2>Project Overview</h2>
+
+        <p>
+
+            This is a full-stack Android app built in Java through
+            Android Studio. The app fetches challenge data from a
+            Flask server I built, which is backed by a MongoDB
+            database of legacy/generational Sims 4 challenges — each
+            challenge broken down into generations, and each
+            generation into its own aspiration, career, traits, and
+            list of goals.
+
+        </p>
+
+        <p>
+
+            On the main screen, the app pulls the full list of
+            challenges from the server and displays them in a list.
+            Tapping a challenge opens its first generation's details,
+            with goals shown as a checkable list. From there you can
+            page forward and backward between generations, and jump
+            back to the main challenge list at any time.
+
+        </p>
+
+        <div class="project-tags">
+
+            <span class="software">Java</span>
+            <span class="tech">Android</span>
+            <span class="tech">Flask</span>
+            <span class="database">MongoDB</span>
+
+        </div>
+
+        <div class="project-buttons">
+
+            <a href="https://github.com/Dev-Check/Sims-4-Challenge-Tracker" class="button">GitHub</a>
+
+            <a href="../projects.html" class="button">
+                Back to Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Demo Video
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="software">Project Demonstration</h2>
+
+    <div class="about-card">
+
+        <video controls width="100%">
+
+            <source src="../assets/videos/sims4-tracker-demo.mp4"
+                    type="video/mp4">
+
+            Your browser does not support HTML5 video.
+
+        </video>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Features
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="software">Key Features</h2>
+
+    <div class="about-card">
+
+        <ul>
+
+            <li>Browse all available Sims 4 legacy/generational challenges</li>
+            <li>Challenge data fetched live from a Flask server backed by MongoDB</li>
+            <li>Per-generation breakdown of aspiration, career, and traits</li>
+            <li>Checkable goal list for tracking progress within a generation</li>
+            <li>Forward/backward navigation between a challenge's generations</li>
+            <li>Quick navigation back to the main challenge list</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Technologies
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="tech">Technologies Used</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            <strong>Language:</strong> Java
+
+        </p>
+
+        <p>
+
+            <strong>Platform:</strong> Android (Android Studio)
+
+        </p>
+
+        <p>
+
+            <strong>Backend:</strong> Flask server (Python), serving data pulled from MongoDB
+
+        </p>
+
+        <p>
+
+            <strong>Tools:</strong>
+            Android Studio,
+            Python,
+            MongoDB,
+            Git,
+            GitHub
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Challenges
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="ai">Challenges</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            Structuring the data so it made sense on both ends was one
+            of the bigger challenges — each Sims 4 challenge needed to
+            be broken down into generations, each with its own
+            aspiration, career, traits, and goals, and that structure
+            had to hold up cleanly through MongoDB, the Flask server,
+            and the JSON parsing on the Android side.
+
+        </p>
+
+        <p>
+
+            Getting the Android app to talk to the Flask server
+            reliably — parsing the returned JSON, handling nested
+            arrays of generations and goals, and passing that data
+            between activities — took some real debugging, especially
+            around edge cases like missing fields in the JSON.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     What I Learned
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="learning">What I Learned</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            This project gave me real full-stack experience —
+            designing how data should be modeled in MongoDB, exposing
+            it through a Flask API, and consuming it from an Android
+            client, rather than working on just one layer of an
+            application.
+
+        </p>
+
+        <p>
+
+            It also strengthened my Android development skills,
+            particularly around passing structured data between
+            activities, working with ListViews and custom adapters,
+            and handling asynchronous network requests safely on a
+            background thread.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Future Improvements
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="database">Future Improvements</h2>
+
+    <div class="about-card">
+
+        <ul>
+
+            <li>Let users create and save their own custom challenges</li>
+            <li>Persist goal progress so it's saved between sessions</li>
+            <li>Add images/icons for aspirations, careers, and traits</li>
+            <li>Improve the UI/UX beyond the basic list views</li>
+            <li>Host the Flask server somewhere other than a local network</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>
