@@ -52,8 +52,8 @@
 
     <p>
 
-        A always-on-top desktop overlay for Smite 2 that tracks
-        matchup winrates and KDA between gods, backed by a MySQL
+        An always-on-top desktop overlay for Smite 2 that tracks
+        matchup win rates and KDA between gods, backed by a MySQL
         database of logged matches.
 
     </p>
@@ -86,7 +86,7 @@
             This project is a small, frameless PyQt5 overlay that
             stays pinned to the corner of the screen while playing
             Smite 2. It lets me pick my god, an enemy god, and a role
-            from dropdowns, and instantly shows the historical winrate
+            from dropdowns, and instantly shows the historical win rate
             and KDA for that specific matchup, pulled live from a
             MySQL database of logged matches.
 
@@ -99,7 +99,7 @@
             game's role, gods, kills/deaths/assists, game time, and
             win/loss, and a "View Matchups" window that queries the
             database for the top 5 best and worst matchups for the
-            selected god and role, ranked by winrate.
+            selected god and role, ranked by win rate.
 
         </p>
 
@@ -145,7 +145,11 @@
                  alt="The main overlay window, in the corner of the screen"
                  width="100%">
 
-            <p>The main overlay in action — since it's designed to stay out of the way during a match, it only takes up a small corner of the screen.</p>
+            <p>
+                The main overlay in action — since it's designed to
+                stay out of the way during a match, it only takes up
+                a small corner of the screen.
+            </p>
 
         </div>
 
@@ -155,7 +159,10 @@
                  alt="The Add Match form window"
                  width="100%">
 
-            <p>The Add Match window, used to log a completed game's gods, role, KDA, game time, and result into the database.</p>
+            <p>
+                The Add Match window, used to log a completed game's
+                gods, role, KDA, game time, and result into the database.
+            </p>
 
         </div>
 
@@ -165,7 +172,10 @@
                  alt="The View Matchups window showing best and worst matchups"
                  width="100%">
 
-            <p>The Matchups window, showing the top 5 best and worst matchups by winrate for the selected god and role.</p>
+            <p>
+                The Matchups window, showing the top 5 best and worst
+                matchups by win rate for the selected god and role.
+            </p>
 
         </div>
 
@@ -191,10 +201,11 @@
 
             <li>Always-on-top, frameless overlay that stays out of the way during a match</li>
             <li>God, enemy god, and role dropdowns that instantly update the displayed stats</li>
-            <li>Live winrate and KDA lookup for a specific god-vs-god-vs-role matchup</li>
+            <li>Live win rate and KDA lookup for a specific god-vs-god-vs-role matchup</li>
             <li>Add Match form for logging date, gamemode, role, gods, kills/deaths/assists, game time, and win/loss</li>
-            <li>View Matchups window showing the top 5 best and worst matchups by winrate, with a minimum-games threshold to avoid small sample sizes</li>
+            <li>View Matchups window showing the top 5 best and worst matchups by win rate, with a minimum-games threshold to avoid small sample sizes</li>
             <li>All stats calculated directly from SQL queries against a MySQL database rather than pre-computed</li>
+            <li>Interactive Tableau dashboard for analyzing win rate, KDA, match count, gods, roles, and gamemodes</li>
 
         </ul>
 
@@ -230,7 +241,14 @@
 
         <p>
 
-            <strong>Data:</strong> MySQL database (<code>smite_stats</code>), with <code>gods</code> and <code>matches</code> tables
+            <strong>Data:</strong> MySQL database (<code>smite_stats</code>),
+            with <code>gods</code> and <code>matches</code> tables
+
+        </p>
+
+        <p>
+
+            <strong>Data Visualization:</strong> Tableau
 
         </p>
 
@@ -239,10 +257,91 @@
             <strong>Tools:</strong>
             Python,
             MySQL,
+            Tableau,
             Git,
             GitHub
 
         </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==========================
+     Tableau Analytics
+=========================== -->
+
+<section class="about-section">
+
+    <h2 class="database">Tableau Analytics Dashboard</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            I extended the Smite 2 tracker by connecting the MySQL
+            database to Tableau and building an interactive analytics
+            dashboard for analyzing my match history. The dashboard
+            summarizes total matches, overall win rate, and overall KDA
+            while also breaking performance down by god, role, and
+            gamemode.
+
+        </p>
+
+        <p>
+
+            I created calculated fields in Tableau for win rate and KDA,
+            using the same underlying match data stored in MySQL. The
+            dashboard can be filtered and interacted with to compare
+            individual gods and roles while keeping the underlying
+            database unchanged.
+
+        </p>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <img src="../assets/images/smite-tableau-dashboard.png"
+                     alt="Full Smite 2 Tableau analytics dashboard"
+                     width="100%">
+
+                <p>
+                    Full Tableau dashboard showing overall match count,
+                    win rate, KDA, and detailed performance by god,
+                    role, and gamemode.
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <img src="../assets/images/smite-tableau-filtered.png"
+                     alt="Smite 2 Tableau dashboard filtered to a selected god"
+                     width="100%">
+
+                <p>
+                    The dashboard filtered to an individual god,
+                    demonstrating how the interactive selections update
+                    the displayed performance data.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="project-tags">
+
+            <span class="database">Tableau</span>
+            <span class="database">MySQL</span>
+            <span class="tech">Data Visualization</span>
+            <span class="tech">Calculated Fields</span>
+
+        </div>
 
     </div>
 
@@ -274,7 +373,7 @@
 
         <p>
 
-            Writing the matchup queries also took care, since winrate
+            Writing the matchup queries also took care, since win rate
             and KDA needed to be calculated correctly per god, per
             enemy god, and per role, while the best/worst matchups
             query additionally needed a minimum-games threshold so a
@@ -284,11 +383,12 @@
 
         <p>
 
-            All data has to be pulled by hand currently. For Smite 2 there is no
-            official or even unoffical way to pull full games with stats in one go 
-            There is no way to pull this data in the game files, and website that do 
-            have trackers do not have offical APIs or API keys to allow me to pull them 
-            from tracker websites.
+            All data has to be pulled by hand currently. For Smite 2
+            there is no official or even unofficial way to pull full
+            games with stats in one go. There is no way to pull this
+            data from the game files, and websites that do have
+            trackers do not have official APIs or API keys to allow
+            me to pull data from tracker websites.
 
         </p>
 
@@ -315,7 +415,7 @@
             This project strengthened my SQL skills, especially
             writing aggregate queries with subqueries, joins, and
             HAVING clauses to turn raw match logs into useful stats
-            like winrate and KDA on the fly.
+            like win rate and KDA on the fly.
 
         </p>
 
@@ -325,6 +425,16 @@
             standard window — building a persistent overlay, wiring up
             multiple secondary windows, and keeping the interface
             responsive to live dropdown changes.
+
+        </p>
+
+        <p>
+
+            Connecting the MySQL data to Tableau also gave me hands-on
+            experience with calculated fields, data visualization,
+            dashboard design, and interactive filtering. This allowed
+            me to turn the same relational data used by the application
+            into a visual analytics dashboard.
 
         </p>
 
